@@ -5,9 +5,9 @@ from datetime import date
 from typing import List, Optional, Set
 
 
-@dataclass(frozen=True)
+@dataclass(unsafe_hash=True)
 class OrderLine:
-    orderId: str
+    orderid: str
     sku: str
     qty: int
 
@@ -18,7 +18,7 @@ class Batch:
         self.sku = sku
         self.eta = eta
         self._purchased_quantity = qty
-        self._allocations = set()  # type: Set[OrderLine]
+        self._allocations: Set[OrderLine] = set()
 
     def allocate(self, line: OrderLine):
         if self.can_allocate(line):
