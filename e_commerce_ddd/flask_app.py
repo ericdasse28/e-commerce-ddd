@@ -8,7 +8,7 @@ from e_commerce_ddd import config, orm, repository, services
 from e_commerce_ddd.domain import model
 
 orm.start_mappers()
-get_session = sessionmaker(bind=create_engine(config.get_postgres_url()))
+get_session = sessionmaker(bind=create_engine(config.get_postgres_uri()))
 app = Flask(__name__)
 
 
