@@ -9,7 +9,7 @@ from sqlalchemy.exc import OperationalError
 from sqlalchemy.orm import clear_mappers, sessionmaker
 
 from e_commerce_ddd import config
-from e_commerce_ddd.orm import mapper_registry, start_mappers
+from e_commerce_ddd.adapters.orm import mapper_registry, start_mappers
 
 
 @pytest.fixture

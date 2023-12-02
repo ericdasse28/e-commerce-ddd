@@ -2,8 +2,8 @@
 
 from sqlalchemy.orm import Session
 
+from e_commerce_ddd.adapters.repository import AbstractRepository
 from e_commerce_ddd.domain import model
-from e_commerce_ddd.repository import AbstractRepository
 
 
 class InvalidSku(Exception):

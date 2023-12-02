@@ -1,6 +1,6 @@
 from sqlalchemy import text
 
-from e_commerce_ddd import repository
+from e_commerce_ddd.adapters import repository
 from e_commerce_ddd.domain import model
 
 
