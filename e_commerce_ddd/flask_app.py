@@ -4,8 +4,9 @@ from flask import Flask, request
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from e_commerce_ddd import config, orm, repository, services
+from e_commerce_ddd import config, orm, repository
 from e_commerce_ddd.domain import model
+from e_commerce_ddd.service_layer import services
 
 orm.start_mappers()
 get_session = sessionmaker(bind=create_engine(config.get_postgres_uri()))

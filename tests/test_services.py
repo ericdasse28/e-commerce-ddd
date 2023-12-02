@@ -2,8 +2,9 @@
 
 import pytest
 
-from e_commerce_ddd import repository, services
+from e_commerce_ddd import repository
 from e_commerce_ddd.domain import model
+from e_commerce_ddd.service_layer import services
 
 
 class FakeRepository(repository.AbstractRepository):
